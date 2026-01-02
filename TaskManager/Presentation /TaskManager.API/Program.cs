@@ -11,29 +11,19 @@ using TaskManager.Persistance.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ---------------- SERVICES ----------------
-
-// Controllers
 builder.Services.AddControllers();
-
-// FluentValidation
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<TaskCreateValidator>();
-
-// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// Application & Persistence Layers
 builder.Services.AddAplicationLayerServices();
 builder.Services.AddPersistanceLayerServices();
 
-// DbContext
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<TaskManagerContext>(options =>
     options.UseNpgsql(connectionString));
 
-// 🔥 CORS (Vite için)
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVite", policy =>
@@ -45,7 +35,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Authorization
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy =>
@@ -55,7 +44,6 @@ builder.Services.AddAuthorization(options =>
         policy.RequireRole("Admin", "Company"));
 });
 
-// Authentication (JWT)
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -73,7 +61,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Kestrel
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.Limits.MinRequestBodyDataRate = null;
@@ -81,30 +68,22 @@ builder.WebHost.ConfigureKestrel(options =>
 
 var app = builder.Build();
 
-// ---------------- DATABASE MIGRATION ----------------
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<TaskManagerContext>();
     try
     {
-        // Veritabanı bağlantısını bekle
         await context.Database.CanConnectAsync();
-        
-        // Migration'ları uygula
         await context.Database.MigrateAsync();
-        
         Console.WriteLine("✅ Database migration completed successfully!");
     }
     catch (Exception ex)
     {
         Console.WriteLine($"❌ Database migration failed: {ex.Message}");
-        // Migration hatası durumunda uygulamayı durdurma, sadece log
+       
     }
 }
 
-// ---------------- MIDDLEWARE ----------------
-
-// Swagger
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -114,16 +93,11 @@ app.UseSwaggerUI(c =>
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
-// 🔥 CORS middleware (Authentication'dan ÖNCE)
 app.UseCors("AllowVite");
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
-// Health check endpoint
 app.MapGet("/health", () => "API is running!");
 
 app.Run();
