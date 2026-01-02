@@ -31,15 +31,11 @@ public class CreateTaskCommandRequestHandler
     {
         _logger.LogInformation(
             "CreateTaskCommand başladı. Title: {Title}", request.Title);
-
-        // Request → Entity
+            
         var taskEntity = _mapper.Map<Domain.Entities.TaskItem>(request);
-  
-
-        // DB işlemi (SaveChanges yok)
+       
         await _taskItemRepository.AddAsync(taskEntity);
 
-        // Entity → Response
         var responseDto = _mapper.Map<CreateTaskCommandResponse>(taskEntity);
 
         _logger.LogInformation(
