@@ -51,7 +51,6 @@ public class UpdateTaskCommandRequestHandler
                 };
             }
 
-            // Map request → entity
             _mapper.Map(request, taskEntity);
 
             await _taskItemRepository.UpdateAsync(taskEntity);
