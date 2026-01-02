@@ -18,7 +18,7 @@ namespace TaskManager.Presentation.Controller
             _mediator = mediator;
         }
 
-        // ✅ GET /api/tasks
+    
         [HttpGet]
         public async Task<IActionResult> GetTasks()
         {
@@ -27,7 +27,6 @@ namespace TaskManager.Presentation.Controller
             return Ok(result);
         }
 
-        // ✅ GET /api/tasks/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTaskById(Guid id)
         {
@@ -40,7 +39,6 @@ namespace TaskManager.Presentation.Controller
             return Ok(result);
         }
 
-        // ✅ POST /api/tasks
         [HttpPost]
         public async Task<IActionResult> CreateTask(
             [FromBody] CreateTaskCommandRequest request)
@@ -49,7 +47,6 @@ namespace TaskManager.Presentation.Controller
             return Ok(result);
         }
 
-        // ✅ PUT /api/tasks/{id}/status
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateTaskStatus(
             Guid id,
@@ -60,4 +57,5 @@ namespace TaskManager.Presentation.Controller
             return Ok(result);
         }
     }
+
 }
