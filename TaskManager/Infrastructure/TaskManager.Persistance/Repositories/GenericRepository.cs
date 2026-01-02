@@ -45,7 +45,6 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return entity;
     }
 
-    // --- Mevcut basit sayfalama (entity döner) ---
     public async Task<PagedResult<T>> GetPagedAsync(int pageNumber, int pageSize, CancellationToken cancellationToken)
     {
         var query = _appContext.Set<T>()
@@ -67,7 +66,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         };
     }
 
-    // --- PROJEKSIYON DESTEKLI GENEL SAYFALAMA (CityName/DistrictName gibi alanlar için ÖNERİLEN) ---
+   
     public async Task<PagedResult<TResult>> GetPagedAsync<TResult>(
         int pageNumber,
         int pageSize,
@@ -85,7 +84,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         if (orderBy != null)
             baseQuery = orderBy(baseQuery);
 
-        var pageItems = await selector(baseQuery)      // 👈 DTO projeksiyonu burada
+        var pageItems = await selector(baseQuery)      
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);
