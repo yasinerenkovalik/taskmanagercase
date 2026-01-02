@@ -23,7 +23,7 @@ public class JwtService
             throw new ArgumentException("JwtSettings:ExpirationInMinutes geçersiz.");
     }
 
-    // 1) ADMIN için sade fonksiyon
+ 
     public string GenerateAdminToken(string userId)
     {
         var claims = new List<Claim>
@@ -34,7 +34,6 @@ public class JwtService
         return BuildToken(claims);
     }
 
-    // 2) COMPANY için ayrı fonksiyon (companyId zorunlu)
     public string GenerateCompanyToken(string userId, string companyId)
     {
         if (!Guid.TryParse(companyId, out _))
@@ -42,9 +41,9 @@ public class JwtService
 
         var claims = new List<Claim>
         {
-            new(ClaimTypes.NameIdentifier, userId), // nameid
+            new(ClaimTypes.NameIdentifier, userId), 
             new(ClaimTypes.Role, "Company"),
-            new("CompanyId", companyId)             // özel claim
+            new("CompanyId", companyId)            
         };
         return BuildToken(claims);
     }
@@ -59,7 +58,6 @@ public class JwtService
         return BuildToken(claims);
     }
 
-    // Ortak token üretimi
     private string BuildToken(IEnumerable<Claim> claims)
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secret));
