@@ -13,7 +13,6 @@ public static class ApplicationLayerService
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(assembly));
 
-        // ✅ Ambiguous olmayan kullanım
         services.AddAutoMapper(typeof(ApplicationLayerService));
 
         services.AddValidatorsFromAssembly(assembly);
