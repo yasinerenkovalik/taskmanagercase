@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:15
+    container_name: taskmanager_db
+    environment:
+      POSTGRES_DB: taskmanager_db
+      POSTGRES_USER: taskmanager_user
+      POSTGRES_PASSWORD: taskmanager_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  api:
+    build:
+      context: ./TaskManager
+      dockerfile: Dockerfile.api
+    container_name: taskmanager_api
+    depends_on:
+      - db
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=taskmanager_db;Username=taskmanager_user;Password=taskmanager_pass"
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:80"
+    ports:
+      - "5001:80"
+    networks:
+      - app-network
+
+  react:
+    build:
+      context: ./taskmanagerrect
+      dockerfile: Dockerfile.react
+    container_name: taskmanager_react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    environment:
+      - VITE_API_URL=http://localhost:5001
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

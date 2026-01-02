@@ -1,0 +1,14 @@
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/bin/Debug/net8.0/TaskManager.Domain.deps.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/bin/Debug/net8.0/TaskManager.Domain.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/bin/Debug/net8.0/TaskManager.Domain.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.csproj.AssemblyReference.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.AssemblyInfoInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.AssemblyInfo.cs
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.csproj.CoreCompileInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/refint/TaskManager.Domain.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/ref/TaskManager.Domain.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/bin/Debug/net8.0/TaskManager.Domain.runtimeconfig.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Domain/obj/Debug/net8.0/TaskManager.Domain.genruntimeconfig.cache

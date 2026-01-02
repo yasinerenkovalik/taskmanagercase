@@ -1,0 +1,14 @@
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/bin/Debug/net8.0/TaskManager.Infrastructure.deps.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/bin/Debug/net8.0/TaskManager.Infrastructure.runtimeconfig.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/bin/Debug/net8.0/TaskManager.Infrastructure.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/bin/Debug/net8.0/TaskManager.Infrastructure.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.csproj.AssemblyReference.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.AssemblyInfoInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.AssemblyInfo.cs
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/refint/TaskManager.Infrastructure.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/TaskManager.Infrastructure.genruntimeconfig.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Infrastructure/TaskManager.Infrastructure/obj/Debug/net8.0/ref/TaskManager.Infrastructure.dll

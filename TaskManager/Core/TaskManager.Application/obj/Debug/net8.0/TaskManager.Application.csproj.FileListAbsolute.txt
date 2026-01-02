@@ -1,0 +1,17 @@
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Application.deps.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Application.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Application.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Domain.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Domain.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.csproj.AssemblyReference.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.AssemblyInfoInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.AssemblyInfo.cs
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.csproj.CoreCompileInputs.cache
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskMana.898BD9DB.Up2Date
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/refint/TaskManager.Application.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.pdb
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/ref/TaskManager.Application.dll
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/bin/Debug/net8.0/TaskManager.Application.runtimeconfig.json
+/Users/yasinerenkovalik/RiderProjects/TaskManager/Core/TaskManager.Application/obj/Debug/net8.0/TaskManager.Application.genruntimeconfig.cache

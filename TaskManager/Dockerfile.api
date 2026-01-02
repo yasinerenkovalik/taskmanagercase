@@ -1,0 +1,32 @@
+# ---------------- BUILD STAGE ----------------
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# Solution dosyasını kopyala
+COPY TaskManager.sln ./
+
+# Tüm csproj dosyalarını kopyala
+COPY ["Presentation /TaskManager.API/TaskManager.API.csproj", "Presentation /TaskManager.API/"]
+COPY ["Core/TaskManager.Application/TaskManager.Application.csproj", "Core/TaskManager.Application/"]
+COPY ["Core/TaskManager.Domain/TaskManager.Domain.csproj", "Core/TaskManager.Domain/"]
+COPY ["Infrastructure/TaskManager.Infrastructure/TaskManager.Infrastructure.csproj", "Infrastructure/TaskManager.Infrastructure/"]
+COPY ["Infrastructure/TaskManager.Persistance/TaskManager.Persistance.csproj", "Infrastructure/TaskManager.Persistance/"]
+
+# restore
+RUN dotnet restore
+
+# tüm projeyi kopyala
+COPY . .
+
+# publish
+RUN dotnet publish "Presentation /TaskManager.API/TaskManager.API.csproj" -c Release -o /out
+
+# ---------------- RUNTIME STAGE ----------------
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+
+COPY --from=build /out .
+
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "TaskManager.API.dll"]
